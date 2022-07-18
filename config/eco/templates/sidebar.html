@@ -1,0 +1,98 @@
+{% block sidebar %}
+
+<style>
+    .card {
+        box-shadow: 0 16px 48px #E3E7EB;
+    }
+    
+    @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600&display=swap');
+    html,
+    body {
+        height: 100%;
+    }
+    
+    * {
+        padding: 0px;
+        margin: 0px;
+    }
+    
+    body {
+        background-color: #dde3fb;
+        display: grid;
+        place-items: center;
+    }
+    
+    .card {
+        background-color: #f5ededbc;
+        border-radius: 10px;
+        font-family: 'Manrope', sans-serif;
+    }
+    
+    .fa {
+        color: #d9d5d5;
+    }
+    
+    #inp1 {
+        background-color: #f5eded;
+        border: 1px solid #636161;
+        font-size: 0.75rem;
+    }
+    
+    #inp1:focus {
+        outline: none;
+        box-shadow: none;
+    }
+    
+    .btn {
+        background-color: #5c72d8;
+        font-size: 0.78rem;
+        border: 0px;
+    }
+    
+    .btn:focus {
+        outline: none;
+        box-shadow: none;
+    }
+    
+    *:focus {
+        outline: none;
+    }
+    
+    .a {
+        margin-top: 20px;
+    }
+</style>
+
+<!-- Sidebar Widgets Column -->
+<div class="col-md-4 float-right a">
+
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-12  col-sm-12 col-xs-12">
+                <div class="card p-3 text-white">
+
+                    <span><i class="fa fa-envelope-open-o fa-2x" aria-hidden="true"></i></span>
+
+                    <h6 class="my-3"> Subscribe to the newsletter </h6>
+
+                    <div class="row d-flex my-2 pr-2  div1">
+                        <div class="col-3 px-0">
+                            <button class="btn text-white px-4 py-2"> OK </button>
+                        </div>
+                        <div class="col-9">
+                            <input type="email" class="form-control py-3" id="inp1" placeholder="Enter email address">
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
+
+{% endblock sidebar %}
