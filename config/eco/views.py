@@ -35,10 +35,12 @@ def contact(request):
     if request.method == "POST":
         contact = Contact()
         name = request.POST.get('name')
+        lname = request.POST.get('lname')
         email = request.POST.get('email')
         message = request.POST.get('message')
 
         contact.name = name
+        contact.lname = lname
         contact.email = email
         contact.message = message
         contact.save()

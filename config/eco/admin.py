@@ -14,5 +14,5 @@ from django.contrib import admin
 from .models import Contact
 
 class contactus(admin.ModelAdmin):
-    list_display = ('id','name','email','message')
+    list_display = ('id','name', 'lname','email','message')
 admin.site.register(Contact, contactus )    
