@@ -1,0 +1,483 @@
+<!-- templates/index.html -->
+
+{% extends "_base.html" %} {% block content %}
+
+
+<!-- Container for demo purpose -->
+<div>
+
+
+
+    <section class="relative">
+        <nav class=" top-0 z-50  py-4 px-8 absolute  navbar navbar-expand-lg   flex items-center w-full  ">
+            <img src="../static/img/mena png.png " style="height: 20px;">
+        </nav>
+
+        <nav class=" top-10 z-50 right-0  left-0  absolute  navbar navbar-expand-lg  lg:w-auto py-1 lg:bg-transparent lg:shadow-none flex items-center w-full justify-between ">
+            <div class="px-6 w-full flex flex-wrap items-center justify-between border-t-2 border-black">
+                <button class="navbar-toggler ml-auto border-0 py-3 lg:hidden leading-none text-xl bg-transparent text-gray-600 hover:text-gray-700 focus:text-gray-700 transition-shadow duration-150 ease-in-out" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContentU"
+                    aria-controls="navbarSupportedContentU" aria-expanded="false" aria-label="Toggle navigation">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" class="w-5" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                      <path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path>
+                    </svg>
+                  </button>
+                <div class="navbar-collapse collapse grow items-center navr" id="navbarSupportedContentU">
+                    <ul class="navbar-nav  flex flex-row ">
+                        <li class="nav-item ml-auto lg:pr-6">
+                            <a class="nav-link text-xl block pr-3 font-extrabold lg:px-4 py-2 text-black hover:text-green-700 focus:text-green-700 transition duration-150 ease-in-out" href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">Home Page</a>
+                        </li>
+                        <li class="nav-item ml-auto lg:px-6">
+                            <a class="nav-link  text-xl block pr-3 lg:px-10 py-2 text-black font-extrabold hover:text-green-700 focus:text-green-700 transition duration-150 ease-in-out" href="{% url 'contact_eng' %}" data-mdb-ripple="true" data-mdb-ripple-color="light">Contact Us</a>
+                        </li>
+                        <li class="nav-item ml-auto lg:px-6">
+                            <a class="nav-link  text-xl block pr-3 lg:px-10 py-2 text-black font-extrabold hover:text-green-700 focus:text-green-700 transition duration-150 ease-in-out" href="{% url 'post' %}" data-mdb-ripple="true" data-mdb-ripple-color="light">Latest News</a>
+                        </li>
+                        <li class="nav-item ml-auto lg:px-6">
+                            <a class="nav-link text-xl block pr-3 font-extrabold lg:px-4 py-2 text-black hover:text-green-700 border-gray-300 focus:text-green-700 transition duration-150 ease-in-out" href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">About Us</a>
+                        </li>
+
+                        <li class="nav-item dropdown static lg:px-2">
+                            <a class="nav-link block pr-2  py-2 text-xl  font-extrabold text-black hover:text-green-700 focus:text-green-700 transition duration-150 ease-in-out dropdown-toggle flex items-center whitespace-nowrap" href="#" data-mdb-ripple="true" data-mdb-ripple-color="light"
+                                type="button" id="dropdownMenuButtonU" data-bs-toggle="dropdown" aria-expanded="false">
+                                language
+                                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="caret-down" class="w-2 mr-2" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                    <path fill="currentColor" d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"></path>
+                                  </svg>
+
+                            </a>
+                            <div class="dropdown-menu  -mt-0 hidden  bg-black absolute top-full" aria-labelledby="dropdownMenuButtonU">
+                                <div class="p-4 pb-0 text-gray-900 md:pb-4 dark:text-white">
+                                    <ul class="space-y-4" aria-labelledby="mega-menu-dropdown-button">
+                                        <li class="active">
+                                            <a href="{% url 'index' %}" class="hover:text-green-700 hover:text-green-700 focus:text-green-700 transition duration-150 ease-in-out  ">
+                                                العربية 
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'index_eng' %}" class="text-green-700 focus:text-green-700 transition duration-150 ease-in-out cursor-not-allowed">
+                                                English
+                                            </a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+
+                            </div>
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class=" mb-16 flex content-center items-center justify-center  " style="min-height: 95vh; ">
+            <div>
+                <img src="https://cdn.aryeo.com/listings/1589-boardwalk-eagan-mn-55122-976745/resized/large/large-f060d849-66e9-4209-b2e0-ba5a1075c54d.jpeg" alt=" " class="absolute top-0 right-0 w-full h-full bg-fixed bg-cover ">
+                <span id="blackOverlay " class=" w-full h-full absolute top-0 right-0 " style="background-color: rgba(24, 28, 22, 0.467); "></span>
+            </div>
+            <div class="container relative mt-64 pl-12">
+
+                <div class="items-center flex flex-wrap ">
+                    <div class="w-full lg:w-3/6 mr-auto backdrop-opacity-20 backdrop-invert bg-white/25 outline-dashed outline-2 outline-offset-2  border-4 border-double border-green-700 backdrop-blur-sm">
+                        <div class=" ">
+                            <h1 class="text-black font-black  text-5xl  animate fadeInLeft delay-600 ">
+                                Durability..<span class="text-green-700 ">Strength</span>..Beauty </h1>
+                            <h3 class="mt-10 text-2xl text-black-300 font-medium  animate fadeInLeft delay-800 ">
+                                For those who need a combination of strength, beauty, durability and aesthetics outdoors, Ecomena delivers all of the necessary tools to make that possible without rivalry in performance. Products that are made to live on.
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="relative">
+        <!-- this relative is for sticky nav bar-->
+        <div class="container  px-32 mx-auto">
+
+            <!-- Section: Design Block -->
+            <section class="mb-32 text-gray-800">
+                <h2 class="text-3xl font-bold mb-6 text-center">
+                    Services we<u class="text-green-700 ">Provide</u>
+                </h2>
+                <div class="flex flex-wrap  items-center">
+                    <div class="grow-0 shrink-0 basis-auto w-full lg:w-5/12 mb-12 lg:mb-0 md:px-6">
+                        <img src="../static/img/Untitled.png" class="w-full" />
+
+                    </div>
+                    <div class="grow-0 shrink-0 basis-auto w-full lg:w-7/12 md:px-6">
+
+
+
+                        <div class="md:mt-12 lg:mt-0 mb-12 lg:mb-10 ">
+                            <div class="relative block rounded-lg shadow-lg px-6 pt-12 pb-6 md:px-12 lg:-ml-14" style="
+                                            background: hsla(0, 0%, 100%, 0.55);
+                                            backdrop-filter: blur(30px);
+                                            z-index: 2;
+                                          ">
+                                <h2 class="text-3xl font-bold mb-6  ">There is no alternative. </h2>
+                                <br>
+                                <p class="text-gray-500 mb-6 font-semibold ">
+                                    Products made with excellence. Eco-friendly helping the environment. Satisfies all of the market needs with the highest quality delivered by the trusted and reliable Ecomena.
+                                </p>
+
+                                <p class="text-gray-500 font-semibold  mb-6">
+                                    Becoming the first company in Iraq, the Middle-East and North Africa to produce eco-friendly materials, making Ecomena an international trade mark.
+                                </p>
+
+                                <br>
+                                <div class="flex justify-end">
+                                    <a href="#" class="relative inline-flex items-center justify-center p-6 px-4 py-2 overflow-hidden font-medium text-green-700 transition duration-300 ease-out border-2 border-green-700 rounded-full shadow-md group">
+                                        <span class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-green-700 group-hover:translate-x-0 ease ">
+                                                <i class="fa-solid fa-arrow-right"></i>
+                                            </span>
+
+                                        <span class="absolute flex items-center justify-center w-full h-full text-green-700 transition-all duration-300 transform group-hover:translate-x-full ease">Read more</span>
+                                        <span class="relative invisible">Read more </span>
+                                    </a>
+                                </div>
+
+
+
+
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+
+
+                </div>
+            </section>
+            <!-- Section: Design Block -->
+
+        </div>
+        <!-- Container for demo purpose -->
+    </section>
+    <!-- Section: Design Block -->
+
+</div>
+<!-- Container for demo purpose -->
+<h2 class="text-3xl font-bold mb-12 pb-4 text-center ">Recycled poly Lumber <u class="text-green-700 ">features</u></h2>
+
+<div class="container   mx-auto relative flex justify-center">
+
+    <img src="https://www.materials-inc.com/media/home-flooring-options.jpg" alt="Snow" style="width:90%;height: 95vh;  border-color: black ; border: 1px;" class="shadow-2xl rounded-lg">
+    <div class="bottom-left flex">
+        <button class="block text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium  text-sm px-2.5 py-2 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800 rounded-full m-1  " type="button"
+            data-modal-toggle="popup-modal1">
+                <i class="fa-regular fa-sun"></i>
+      </button>
+        <button class="block text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800" type="button"
+            data-modal-toggle="popup-modal1">
+                Durable
+          </button>
+
+        <div id="popup-modal1" tabindex="-1" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 md:inset-0 h-modal md:h-full justify-center items-center" aria-hidden="true">
+            <div class="relative p-4 w-full max-w-md h-full md:h-auto">
+                <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                    <button type="button" class="absolute top-3  right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white" data-modal-toggle="popup-modal1">
+                          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>  
+                      </button>
+                    <div class="p-6 text-center pt-12">
+                        <h3 class="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">
+                            Our products are not affected by the weather or external environments. They will not crack, splinter or peel off.
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="top-left flex">
+
+        <button class="block text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium  text-sm px-2.5 py-2 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800 rounded-full m-1  " type="button"
+            data-modal-toggle="popup-modal2">
+                <i class="fas fa-hand-holding-water"></i>
+  </button>
+        <button class="block text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800" type="button"
+            data-modal-toggle="popup-modal2">
+                Water Resistant
+          </button>
+
+        <div id="popup-modal2" tabindex="-1" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 md:inset-0 h-modal md:h-full justify-center items-center" aria-hidden="true">
+            <div class="relative p-4 w-full max-w-md h-full md:h-auto">
+                <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                    <button type="button" class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white" data-modal-toggle="popup-modal2">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>  
+
+                        </button>
+                    <div class="p-6 text-center pt-12">
+                        <h3 class="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">
+                            Our product is resistant to water and humidity as it is covered by a poly material that helps the recycled poly lumber stay safe.
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="top-right flex">
+        <button class="block text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium  text-sm px-2.5 py-2 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800 rounded-full m-1  " type="button"
+            data-modal-toggle="popup-modal3">
+                <i class="fas fa-tools"></i>
+  </button>
+        <button class="block text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800" type="button"
+            data-modal-toggle="popup-modal3">
+               Extreme Strength
+          </button>
+
+        <div id="popup-modal3" tabindex="-1" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 md:inset-0 h-modal md:h-full justify-center items-center" aria-hidden="true">
+            <div class="relative p-4 w-full max-w-md h-full md:h-auto">
+                <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                    <button type="button" class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white" data-modal-toggle="popup-modal3">
+                          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>  
+                      </button>
+                    <div class="p-6 text-center pt-12">
+                        <h3 class="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">
+                            Our recycled Poly Lumber is extremely strong and durable as researches shows that it is approximately 3-5 times stronger than the average plumber.
+                        </h3>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom-right flex">
+        <button class="block text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium  text-sm px-2.5 py-2 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800 rounded-full m-1  " type="button"
+            data-modal-toggle="popup-modal4">
+            <i class="fa-regular fa-sun"></i>
+  </button><button class="block text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
+            type="button" data-modal-toggle="popup-modal4">
+                Eco-Friendly
+          </button>
+
+        <div id="popup-modal4" tabindex="-1" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 md:inset-0 h-modal md:h-full justify-center items-center" aria-hidden="true">
+            <div class="relative p-4 w-full max-w-md h-full md:h-auto">
+                <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                    <button type="button" class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white" data-modal-toggle="popup-modal4">
+                          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>  
+                      </button>
+                    <div class="p-6 text-center pt-12">
+                        <h3 class="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">
+                            Eco-friendly recycled Poly Lumber does not require paint or other chemical materials to maintain it which is more healthy and eco-friendly.
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="centered flex">
+        <button class="block text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium  text-sm px-2.5 py-2 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800 rounded-full m-1  " type="button"
+            data-modal-toggle="popup-modal4">
+        <i class="fa-regular fa-sun"></i>
+</button><button class="block text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
+            type="button" data-modal-toggle="popup-modal4">
+            Low Maintenance
+      </button>
+
+        <div id="popup-modal4" tabindex="-1" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 md:inset-0 h-modal md:h-full justify-center items-center" aria-hidden="true">
+            <div class="relative p-4 w-full max-w-md h-full md:h-auto">
+                <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                    <button type="button" class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white" data-modal-toggle="popup-modal4">
+                      <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>  
+                  </button>
+                    <div class="p-6 text-center pt-12">
+                        <h3 class="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">
+                            test
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- Container for demo purpose -->
+<div class="container  px-32 mx-auto ">
+
+    <!-- Section: Design Block -->
+    <section class="mb-32 text-gray-800 text-center pt-32">
+
+        <h2 class="text-3xl font-bold mb-12 pb-4 text-center">Product <u class="text-green-700 ">Applications</u></h2>
+
+        <div class="grid lg:grid-cols-3 gap-6 xl:gap-x-12">
+            <div class="mb-6 lg:mb-0 desc">
+                <div class="relative block bg-white rounded-lg shadow-lg a">
+                    <div class="flex">
+                        <div class="relative overflow-hidden bg-no-repeat bg-cover relative overflow-hidden bg-no-repeat bg-cover shadow-lg rounded-lg mx-4 -mt-4" data-mdb-ripple="true" data-mdb-ripple-color="light">
+                            <img src="https://th.bing.com/th/id/R.0704614254459800d4b7f4a9fd3bc39c?rik=d38JdXRCCaXv7w&riu=http%3a%2f%2famerican-plasticlumber.com%2fwp-content%2fuploads%2f2015%2f12%2flp-structural-2.jpg&ehk=wp0bHHKGT7tpcfZO7bkDjojcd38hY5xSdWSQz5PGt0A%3d&risl=&pid=ImgRaw&r=0"
+                                class="w-full" style="height:250px ; width:380px" />
+                            <a href="#!">
+                                <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 hover:opacity-100 transition duration-300 ease-in-out" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="p-6 ">
+                        <h5 class="font-bold text-lg mb-3">Structural Applications</h5>
+
+                        <div class="show-desc flex ">
+                            <h2>
+                                Ecomena products provides rigid and reliable materials that could be used for structural purposes, as in external house covers, buildings' pillars, around house decorative products or as a supporting product.
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-6 lg:mb-0 desc">
+                <div class="relative block bg-white rounded-lg shadow-2xl a">
+                    <div class="flex">
+                        <div class="relative overflow-hidden bg-no-repeat bg-cover relative overflow-hidden bg-no-repeat bg-cover shadow-lg rounded-lg mx-4 -mt-4" data-mdb-ripple="true" data-mdb-ripple-color="light">
+                            <img src="https://th.bing.com/th/id/OIP.OQ4e1uUOKCG_eGH3hVagWQHaFj?pid=ImgDet&rs=1" class="w-full" style="height:250px ; width:380px" />
+                            <a href="#!">
+                                <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 hover:opacity-100 transition duration-300 ease-in-out" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h5 class="font-bold text-lg mb-3 a">Commercial Applications</h5>
+                        <div class="show-desc">
+                            <h2>
+                                Ecomena provides the excellent material for any commercial application ranging from park benches to lake docks, emitting natural and eco-friendly vibes.
+                            </h2>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="mb-0 desc">
+                <div class="relative block bg-white rounded-lg shadow-lg a">
+                    <div class="flex">
+                        <div class="relative overflow-hidden bg-no-repeat bg-cover relative overflow-hidden bg-no-repeat bg-cover shadow-lg rounded-lg mx-4 -mt-4" data-mdb-ripple="true" data-mdb-ripple-color="light">
+                            <img src="https://th.bing.com/th/id/R.729f3c6aa7990e0593c647dc59f66fc2?rik=d17BEBfLPuF7Ew&pid=ImgRaw&r=0" class="w-full" style="height:250px ; width:380px" />
+                            <a href="#!">
+                                <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 hover:opacity-100 transition duration-300 ease-in-out" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h5 class="font-bold text-lg mb-3 a">Residential Applications</h5>
+                        <div class="show-desc flex">
+                            <h2>
+                                Ecomena provides materials that could be used in multiple residential themes ranging from kitchens to offices. Ecomena materials can also be used for ceiling and walls decorations and all other in house applications could be covered by eco friendly recycled
+                                poly lumber.
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- Section: Design Block -->
+
+</div>
+<!-- Container for demo purpose -->
+
+<!-- Section: Design Block -->
+<section class="mb-32 text-gray-800 flipcard">
+
+
+    <h2 class="text-3xl font-bold mb-12 text-center">
+        Why Choose<u class="text-green-700"> Us?</u>
+    </h2>
+
+    <!-- horizontal -->
+
+
+    <div class="flip">
+        <div class="front" style="background-image: url(https://th.bing.com/th/id/OIP.tQyRvRITl9a7X2CF75Cm_gHaFj?pid=ImgDet&rs=1)">
+            <h1 class="text-shadow">Recycled Poly Lumber</h1>
+            </hi>
+        </div>
+        <div class="back">
+            <h2>Recycled Poly Lumber</h2>
+            <p>Good eco-friendly Lumber that makes applications look more aesthetic and at the same time more strong and durable than normal Lumber.</p>
+        </div>
+    </div>
+
+    <div class="flip">
+        <div class="front bg-center relative" style="background-image: url(https://5.imimg.com/data5/PV/CK/YV/ANDROID-39771616/product-jpeg-500x500.jpg); background-repeat: no-repeat;background-size: auto;">
+            <span id="blackOverlay" class=" w-full h-full absolute   absolute top-0 right-0 rounded-lg" style="background-color: rgba(40, 57, 34, 0.218);  "></span>
+
+            <h1 class="text-shadow "> Sustainability
+            </h1>
+        </div>
+        <div class="back">
+            <h2>Sustainability</h2>
+            <p>
+                Our mission is to accomplish a recycled Poly Lumber that would be eco-friendly and save our planet.
+            </p>
+        </div>
+    </div>
+
+    <div class="flip">
+        <div class="front" style="background-image: url(https://bmk-woods.com/wp-content/uploads/2018/10/pini-kay-charcoal-1.jpg)">
+            <span id="blackOverlay" class=" w-full h-full absolute   absolute top-0 right-0 rounded-lg" style="background-color: rgba(40, 57, 34, 0.218); "></span>
+
+            <h1 class="text-shadow">Performance</hi>
+        </div>
+        <div class="back">
+            <h2>Performance</h2>
+            <p>
+                We believe that our clients need more reliable and trusted materials to use in their applications.
+            </p>
+        </div>
+    </div>
+
+    <div class="flip">
+        <div class="front" style="background-image: url(https://images.pexels.com/photos/540518/pexels-photo-540518.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb)">
+            <span id="blackOverlay" class=" w-full h-full absolute   absolute top-0 right-0 rounded-lg" style="background-color: rgba(40, 57, 34, 0.218); "></span>
+
+            <h1 class="text-shadow ">
+                Customer Satisfaction
+                </hi>
+        </div>
+        <div class="back">
+            <h2>
+                Customer Satisfaction
+            </h2>
+            <p>
+                We are always ready to serve our customers.
+            </p>
+        </div>
+    </div>
+
+
+    </div>
+
+</section>
+
+</div>
+
+
+<!-- Back to top button -->
+<button type="button " data-mdb-ripple="true " data-mdb-ripple-color="light " class="inline-block p-3 bg-green-700 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-gren-700 hover:shadow-lg focus:bg-green-700 focus:shadow-lg
+                    focus:outline-none focus:ring-0 active:bg-green-700 active:shadow-lg transition duration-150 ease-in-out hidden bottom-5 right-5 fixed " id="btn-back-to-top ">
+    <svg
+    aria-hidden="true "
+    focusable="false "
+    data-prefix="fas "
+    class="w-4 h-4 "
+    role="img "
+    xmlns="http://www.w3.org/2000/svg "
+    viewBox="0 0 448 512 "
+    >
+    <path
+        fill="currentColor "
+        d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8
+                    10-34.3.4z "
+    ></path>
+    </svg>
+    </button>
+</div>
+
+
+<!-- The JS file used below only for back to top button -->
+<script src="../static/js/eco.js">
+</script>
+
+{% block footere %} {% include 'footer_eng.html' %} {% endblock footere %} {% endblock content %}

@@ -1,0 +1,163 @@
+ {% load static %}
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <script src="./TW-ELEMENTS-PATH/dist/js/index.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+
+    <link href="http://fonts.cdnfonts.com/css/tajawal" rel="stylesheet">
+
+
+
+</head>
+
+<body>
+    <!-- Container for demo purpose -->
+    <div>
+
+
+        <nav class=" py-4 bg-green-800 shadow">
+            <div class="w-full container mx-auto lg:px-32 flex flex-wrap items-center justify-between">
+                <nav>
+                    <ul class="flex items-center justify-between font-bold text-sm text-white uppercase no-underline">
+                        <li><a class="hover:text-gray-200 hover:underline px-4" href="{% url 'index' %}">Home Page</a></li>
+
+                    </ul>
+                </nav>
+
+                <div class="flex items-center text-lg no-underline text-white pr-6">
+                    <a class="" href="#">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a class="pl-6" href="#">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a class="pl-6" href="#">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a class="pl-6" href="#">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+
+
+            </div>
+
+        </nav>
+
+        <!-- Text Header -->
+        <header class="w-full container mx-auto">
+            <div class="flex flex-col items-center py-6">
+                <img src="../static/img/mena png.png" width="200px" alt="">
+            </div>
+        </header>
+
+        <div class="container mx-auto lg:px-32 flex flex-wrap py-6">
+
+            <!-- Posts Section -->
+            <section class="w-full md:w-2/3 flex flex-col items-center px-3 ">
+                <div class="container  w-full mx-auto flex bg-white shadow  ">
+
+
+                    <div class=" p-6">
+
+                        <h2 class="text-3xl font-bold mb-6">
+                            <p class="text-green-600 mb-3">
+                                Contact Us
+                            </p>
+
+                            <p class="text-base text-gray-400  ">
+                                Whether you're gathering information for a future project, looking for immediate help, or simply have a question, we are here for you. Complete the form below and we will help as soon as possible.
+                            </p>
+                            <p class="text-base text-gray-400">
+                            </p>
+                        </h2>
+                        <div class="md:mt-12 lg:mt-0 mb-8 lg:mb-8 ">
+                            <form class="w-full" method="POST">
+                                {% csrf_token %}
+                                <div class="flex flex-wrap -mx-3 mb-6">
+                                    <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+
+                                        <input name="name" class="appearance-none block w-full flex  text-gray-700 border border-b-8 border-green-700 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-first-name" type="text" placeholder="First Name">
+                                    </div>
+                                    <div class="w-full md:w-1/2 px-3">
+
+                                        <input name="lname" class="appearance-none block w-full flex  text-gray-700 border border-b-8 border-green-700 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="Last Name">
+                                    </div>
+                                </div>
+                                <div class="flex flex-wrap -mx-3 mb-6">
+                                    <div class="w-full px-3">
+
+                                        <input name="email" class="appearance-none block w-full flex  text-gray-700 border border-b-8 border-green-700 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="email" type="email" placeholder="Email">
+                                    </div>
+                                </div>
+
+                                <div class="flex flex-wrap -mx-3 mb-6">
+                                    <div class="w-full px-3">
+
+                                        <textarea name="message" class=" no-resize appearance-none block flex  w-full text-gray-700 border border-green-700 border-b-8 rounded py-6 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-auto resize-none" id="message"
+                                            placeholder="How can we help you?"></textarea>
+                                    </div>
+                                </div>
+                                <div class="md:flex md:items-center lg:flex lg:items-start justify-end">
+
+                                    <button class="relative inline-flex items-center justify-center  px-6 py-2 overflow-hidden font-medium text-green-700 transition duration-300 ease-out border-2 border-green-700 rounded-full shadow-md group">
+                                    
+                                        <span class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-green-700 group-hover:translate-x-0 ease">
+                                            <i class="fa-solid fa-arrow-right"></i>
+
+                                        </span>
+                                        <span class="absolute flex  items-center justify-center w-full h-full text-green-700 transition-all duration-300 transform group-hover:translate-x-full ease">Submit</span>
+                                        <span class="relative invisible">Submit</span>
+                                   
+                                </button>
+
+
+
+
+                            </form>
+                            </div>
+                        </div>
+                    </div>
+
+
+            </section>
+
+            <!-- Sidebar Section -->
+            <aside class="w-full md:w-1/3 flex flex-col items-center px-3 ">
+
+                <section class="text-gray-600 body-font relative w-full flex bg-white shadow h-full">
+                    <div class="absolute inset-0 bg-gray-300 w-full h-full">
+                        <iframe width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0" title="map" scrolling="no" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d213392.94151159923!2d44.21582025784518!3d33.311894384717526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15577f67a0a74193%3A0x9deda9d2a3b16f2c!2sBaghdad!5e0!3m2!1sen!2siq!4v1655740898388!5m2!1sen!2siq"
+                            style="filter: contrast(1.2) opacity(0.7) grayscale(0.2);"></iframe>
+                    </div>
+                    <div class="container px-5 py-24 mx-auto flex h-96">
+                    </div>
+                </section>
+            </aside>
+
+
+
+            </div>
+
+
+
+
+
+
+            <!-- The JS file used below only for back to top button -->
+            <script src="eco.js">
+            </script>
+</body>
+{% block footere %} {% include 'footer_eng.html' %} {% endblock footere %}
+
+</html>

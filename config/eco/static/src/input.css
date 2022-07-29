@@ -1000,8 +1000,8 @@ Ensure the default browser behavior of the `hidden` attribute.
     
     .top-left {
         position: absolute;
-        top: 200px;
-        left: 160px;
+        top: 150px;
+        left: 180px;
     }
     
     .top-right {
@@ -1018,8 +1018,8 @@ Ensure the default browser behavior of the `hidden` attribute.
     
     .centered {
         position: absolute;
-        top: 50%;
-        left: 50%;
+        top: 80%;
+        left: 60%;
         transform: translate(-50%, -50%);
     }
     
@@ -1031,10 +1031,22 @@ Ensure the default browser behavior of the `hidden` attribute.
         top: 83%;
         padding-bottom: 120px;
     }
+    /* Style 3: Just animate the :after element's width from 0 to 100% */
     
-    .sticky {
-        position: fixed;
-        z-index: 99;
-        box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.05);
-        transition: all 0.3s ease-out 0s;
+    .menu3 li:after {
+        content: "";
+        position: absolute;
+        width: 0%;
+        height: 1px;
+        display: block;
+        transition: all 0.3s ease;
+        bottom: 0%;
+        box-shadow: inset 0 0 50px rgb(113, 172, 123), inset 20px 0 80px rgb(0, 255, 26), inset -20px 0 80px #0ff, inset 20px 0 300px rgb(0, 255, 170), inset -20px 0 300px #0ff, 0 0 50px #fff, -10px 0 80px #f0f, 10px 0 80px #0ff;
+    }
+    
+    .menu3 li:hover::after {
+        width: 100%;
+        height: 3px;
+        background-color: #54e9bc;
+        ;
     }

@@ -8,7 +8,10 @@ urlpatterns = [
     path('blog/<slug:slug>/', views.PostDetail.as_view(), name='post_detail'),
   
     path('contact/', views.contact, name='contact'),
+    path('contact_eng/', views.contact_eng, name='contact_eng'),
+    path("eng/", views.index_eng, name="index_eng"),
     path("", views.index, name="index"),
+   
 ]
 
 if settings.DEBUG:

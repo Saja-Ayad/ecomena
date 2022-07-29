@@ -3,7 +3,7 @@
 {% load static %}
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
@@ -19,7 +19,7 @@
     <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/flowbite@1.4.7/dist/flowbite.min.css" />
     <script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js"></script>
-
+    <!-- Place favicon.ico in the root directory -->
     <link href="http://fonts.cdnfonts.com/css/tajawal" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
     <link rel="stylesheet" href=" {% static 'src/input.css' %}">
@@ -33,7 +33,7 @@
     <div class=" mx-auto">
         {% block content %} {% endblock content %}
     </div>
-    {% block footer %} {% endblock footer %}
+
 </body>
 
 </html>

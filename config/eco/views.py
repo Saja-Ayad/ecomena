@@ -16,6 +16,11 @@ from .models import  Contact, Post
 
 def index(request):
     return render(request, 'index.html')
+def index_eng(request):
+    return render(request, 'index_eng.html')
+
+
+
 
 class PostList(generic.ListView):
     queryset = Post.objects.filter(status=1).order_by('-created_on')
@@ -46,3 +51,19 @@ def contact(request):
         contact.save()
         
     return render(request, 'contact1.html')
+
+def contact_eng(request):
+    if request.method == "POST":
+        contact = Contact()
+        name = request.POST.get('name')
+        lname = request.POST.get('lname')
+        email = request.POST.get('email')
+        message = request.POST.get('message')
+
+        contact.name = name
+        contact.lname = lname
+        contact.email = email
+        contact.message = message
+        contact.save()
+        
+    return render(request, 'contact1_eng.html')
